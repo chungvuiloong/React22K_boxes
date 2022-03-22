@@ -17,9 +17,11 @@
   padding : 0;
   margin : 0;
 }
+
 html {
   border: 20px solid black;
 }
+
 .App-header {
   background-color: #066780;
   min-height: 25vh;
@@ -46,13 +48,33 @@ html {
 }
 
 .container {
+  height:100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-top: 20px solid black;
+  border-bottom: 20px solid black;
 }
 
 .cards {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  box-shadow: 20px 20px 50px rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  justify-content: center;
+  background: white;
+  margin: 15px;
+  padding: 5px;
+
+}
+
+.box {
   height: 200px;
   width: 200px;
   border: 1px solid black;
