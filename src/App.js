@@ -31,12 +31,29 @@ const App = () => {
       } */}
 
 
-        {persons.map((person) => (<Box name={person.name} title={person.title} age={person.age}
+        {persons.map((person) => (
+            <Box 
+              name={person.name} 
+              title={person.title} 
+              age={person.age}
+              languages={person.languages.map((language) => (
+                <li>{language.name}</li>
+              ))}
+            />
+          ))
+        }
 
-        languages={person.languages.map((language) => (<li>{language.name}</li>))}/>
+        {persons.map((person) => (
+            <Box 
+                name={person.name} 
+                title={person.title} 
+                age={person.age}
+                languages={person.languages.map((language) => (
+                  <div>{language.id}) {language.name}</div>))}
+            />
+         ))
+        }
         
-        ))
-      }
       </main>
         <Footer />
     </div>
