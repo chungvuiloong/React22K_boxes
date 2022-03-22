@@ -8,7 +8,7 @@ const started_year = 2016;
 
 const Main = () => {
   return (
-    <div>
+    <div className="App-main">
 {/*  
         <p>Jere Jere Jere Jere</p>
         <h1>Hello World, {name}, {year}, {month}, {date}</h1>

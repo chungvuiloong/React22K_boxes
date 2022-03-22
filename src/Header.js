@@ -4,11 +4,8 @@ import React from "react";
 
 const Header = () => {
     return (
-        <div>
-            <h1>I am header.</h1>
-            <div>
-                MrJay
-            </div>
+        <div className="App-header">
+            <h1>Logo</h1>
         </div>
     );
 };
