@@ -4,7 +4,7 @@ const Box = (props) => {
                   <h4>{props.name}</h4>
                   <div>title: {props.title}</div>
                   <div>age: {props.age}</div>
-                  <div>languages: {props.languages}</div>
+                  <div>languages: {props.lang}</div>
               </div>
     );
   };
