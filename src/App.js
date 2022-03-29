@@ -1,8 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
-import Main from './Main';
 import Box from './Box';
 
 const persons = [
@@ -18,34 +17,28 @@ const App = () => {
   return (
     <div className="App">
         <Header />
-        {/* <Main /> */}
-   
-        {/* <Box name={persons[0].name} title={persons[0].title} age={persons[0].age}/> */}
-    <main className="container">
+          <main className="container">
+            {persons.map((person) => (
+                <Box 
+                  name={person.name} 
+                  title={person.title} 
+                  age={person.age}
+                  lang={person.lang.map((language) => (
+                    <li>{language.name}</li>
+                  ))}
+                />
+              ))
+            };
 
-
-        {persons.map((person) => (
-            <Box 
-              name={person.name} 
-              title={person.title} 
-              age={person.age}
-              lang={person.lang.map((language) => (
-                <li>{language.name}</li>
-              ))}
-            />
-          ))
-        }
-
-        {persons.map((person) => (
-            <Box 
-                name={person.name} 
-                title={person.title} 
-                age={person.age}
-                lang={person.lang.map((language) => (
-                  <div>{language.id}) {language.name}</div>))}
-            />
-         ))
-        }
+            {persons.map((person) => (
+                <Box 
+                    name={person.name} 
+                    title={person.title} 
+                    age={person.age}
+                    lang={person.lang.map((language) => (
+                      <div>{language.id}) {language.name}</div>))}
+                />
+            ))};
         
       </main>
         <Footer />
