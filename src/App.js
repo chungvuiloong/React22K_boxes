@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import Box from './Box';
+import Animals from './Animals';
 
 const persons = [
   {name:"Maria",  title:"CEO",        age:"29", lang:[{name:'English', id: 1}, {name:'Russian', id: 2}]},
@@ -18,6 +19,15 @@ const App = () => {
     <div className="App">
         <Header />
           <main className="container">
+            {Animals.map((animal)=> (
+              <Box name={animal.name}></Box>
+            ))}
+
+          
+            
+
+            
+
             {persons.map((person) => (
                 <Box 
                   name={person.name} 
@@ -28,7 +38,7 @@ const App = () => {
                   ))}
                 />
               ))
-            };
+            }
 
             {persons.map((person) => (
                 <Box 
@@ -38,7 +48,8 @@ const App = () => {
                     lang={person.lang.map((language) => (
                       <div>{language.id}) {language.name}</div>))}
                 />
-            ))};
+            ))}
+        
         
       </main>
         <Footer />
